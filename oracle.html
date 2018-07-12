@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>onmouseover</title>
+  <style>
+  .my_circle {
+    width: 50px;
+    height: 50px;
+  }
+</style>
+<script type="text/javascript" src="oracle.js"></script>
+<script type="text/javascript">
+  var paddingTop = 0;
+  function move () {
+    console.log('навели мышь');
+    var elements = document.getElementsByClassName('my_circle');
+    console.log('elements', elements);
+    var myElement = elements[0];
+    console.log('myElement', myElement);
+    paddingTop += 50;
+    console.log('paddingTop', paddingTop);
+    var paddingTopPx = paddingTop + 'px';
+    myElement.style.paddingTop = paddingTopPx;
+  }
+</script>
+
+
+</head>
+<body>
+
+
+<!-- <button onclick="answers()">Oracle Answer</button> -->
+  <input type="text" id="question">
+<!--   <button onclick="showQuestion()">User question:</button> -->
+    <button onclick="total()">Q&A:</button>
+  <div id='qQutput'></div>
+  <div id='OrQutput'></div>
+
+ <img src="oracle.jpg" onmouseover="total()">
+
+
+<!--   <h1>onmouseover</h1>
+  <p>наведите мышь на круг</p>
+  <div class="my_circle" onmouseover="move()">
+    <svg width="50" height="50">
+      <circle cx="25" cy="25" r="25" />
+    </svg>
+  </div -->
+</body>
+</html>
